@@ -2,7 +2,9 @@
 echo '***step1 start*****************'
 
 UBUNTU_VER=$(lsb_release -sc)
+echo '***1*****************'
 ROS_VER=melodic
+echo '***2*****************'
 [ "$UBUNTU_VER" = "bionic" ] || exit 1
 
 echo "deb http://packages.ros.org/ros/ubuntu $UBUNTU_VER main" > /tmp/$$-deb
