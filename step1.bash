@@ -9,6 +9,7 @@ echo '***2*****************'
 
 echo "deb http://packages.ros.org/ros/ubuntu $UBUNTU_VER main" > /tmp/$$-deb
 sudo mv /tmp/$$-deb /etc/apt/sources.list.d/ros-latest.list
+echo '***3*****************'
 
 set +vx
 while ! sudo apt-get install -y curl ; do
