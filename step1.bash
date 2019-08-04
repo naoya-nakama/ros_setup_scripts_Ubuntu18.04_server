@@ -6,10 +6,11 @@ echo '***1*****************'
 ROS_VER=melodic
 echo '***2*****************'
 [ "$UBUNTU_VER" = "bionic" ] || exit 1
-
-echo "deb http://packages.ros.org/ros/ubuntu $UBUNTU_VER main" > /tmp/$$-deb
-sudo mv /tmp/$$-deb /etc/apt/sources.list.d/ros-latest.list
 echo '***3*****************'
+echo "deb http://packages.ros.org/ros/ubuntu $UBUNTU_VER main" > /tmp/$$-deb
+echo '***4*****************'
+sudo mv /tmp/$$-deb /etc/apt/sources.list.d/ros-latest.list
+echo '***5*****************'
 
 set +vx
 while ! sudo apt-get install -y curl ; do
