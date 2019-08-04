@@ -1,4 +1,5 @@
 #!/bin/bash -exv
+echo '***step1 start*****************'
 
 UBUNTU_VER=$(lsb_release -sc)
 ROS_VER=melodic
